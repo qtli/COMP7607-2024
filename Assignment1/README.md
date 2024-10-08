@@ -1,4 +1,4 @@
-# Assignment 2
+# Assignment 1
 
 ## Contents
 - [A1.pdf](A1.pdf): Assignment Handbook
