@@ -1,5 +1,3 @@
-# COMP7607-2024
-
 # COMP7607 ｜ Natural Language Processing ｜ Fall 2024
 https://nlp.cs.hku.hk/comp7607-fall2024/
 
