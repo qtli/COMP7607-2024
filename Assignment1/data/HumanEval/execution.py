@@ -91,17 +91,28 @@ def check_correctness(problem: Dict,
     )
 
 
+# @contextlib.contextmanager
+# def time_limit(seconds: float):
+#     def signal_handler(signum, frame):
+#         raise TimeoutException("Timed out!")
+#     signal.setitimer(signal.ITIMER_REAL, seconds)
+#     signal.signal(signal.SIGALRM, signal_handler)
+#     try:
+#         yield
+#     finally:
+#         signal.setitimer(signal.ITIMER_REAL, 0)
+
+import threading
 @contextlib.contextmanager
 def time_limit(seconds: float):
-    def signal_handler(signum, frame):
-        raise TimeoutException("Timed out!")
-    signal.setitimer(signal.ITIMER_REAL, seconds)
-    signal.signal(signal.SIGALRM, signal_handler)
+    timer = threading.Timer(
+        seconds, lambda: (_ for _ in ()).throw(TimeoutException("Timed out!"))
+    )
+    timer.start()
     try:
         yield
     finally:
-        signal.setitimer(signal.ITIMER_REAL, 0)
-
+        timer.cancel()
 
 @contextlib.contextmanager
 def swallow_io():
