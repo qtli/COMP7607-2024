@@ -1,3 +1,4 @@
+import pdb
 from collections import defaultdict, Counter
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Union, Iterable, Dict
@@ -49,7 +50,6 @@ def evaluate_functional_correctness(
     """
 
     problems = read_problems(problem_file)
-
     # Check the generated samples against test suites.
     with ThreadPoolExecutor(max_workers=n_workers) as executor:
 
@@ -69,6 +69,7 @@ def evaluate_functional_correctness(
             n_samples += 1
 
         assert len(completion_id) == len(problems), "Some problems are not attempted."
+        print(completion_id)
 
         print("Running test suites...")
         for future in tqdm.tqdm(as_completed(futures), total=len(futures)):
@@ -103,3 +104,5 @@ def evaluate_functional_correctness(
     write_jsonl(out_file, tqdm.tqdm(combine_results(), total=n_samples))
 
     return pass_at_k
+
+

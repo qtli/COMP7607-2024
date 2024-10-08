@@ -2,6 +2,7 @@ import pdb
 from typing import Iterable, Dict
 import gzip
 import json
+import os
 
 HUMAN_EVAL = "HumanEval.jsonl"
 
