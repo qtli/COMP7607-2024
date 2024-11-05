@@ -12,7 +12,7 @@ COMP3314 or COMP3340, MATH1853
 
 ###### [Assignments 1](Assignment1)
 
-**[Assignments 2](Assignment2)**
+###### [Assignments 2](Assignment2)
 
 
 
