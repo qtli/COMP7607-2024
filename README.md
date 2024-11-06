@@ -12,6 +12,8 @@ COMP3314 or COMP3340, MATH1853
 
 ###### [Assignments 1](Assignment1)
 
+###### [Assignments 2](Assignment2)
+
 
 
 ## Evaluation
@@ -19,5 +21,4 @@ We will review your work individually to ensure that you receive due credit for 
 
 ## Policy and honor code
 You are free to discuss ideas and implementation details with other students. However, copying others’ codes will not help your study but jeopardize it. We will check your work against other submissions and Internet sources. It is easy to know if you did your own work or not. To be clear, we encourage you to discuss with your classmates but you MUST do your work independently and CANNOT simply copy. If plagiarism is identified, one may face serious consequences according to the Faculty and University policy.
-
 
